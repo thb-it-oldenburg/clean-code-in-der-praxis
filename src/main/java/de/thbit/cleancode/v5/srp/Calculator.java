@@ -13,8 +13,8 @@ public class Calculator {
     final String operation = ArgumentParser.parseOperation(args);
 
     if (ADDITION.equals(operation)) {
-      final int addidtionResult = CalculationService.add(firstNumber, secondNumber);
-      ConsoleResultPrinter.printResult(ADDITION, addidtionResult);
+      final int additionResult = CalculationService.add(firstNumber, secondNumber);
+      ConsoleResultPrinter.printResult(ADDITION, additionResult);
     }
     if (SUBTRACTION.equals(operation)) {
       final int subtractionResult = CalculationService.subtract(firstNumber, secondNumber);

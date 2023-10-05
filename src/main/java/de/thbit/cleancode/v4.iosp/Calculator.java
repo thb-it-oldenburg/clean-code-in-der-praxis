@@ -13,8 +13,8 @@ public class Calculator {
     final String operation = args[2];
 
     if (ADDITION.equals(operation)) {
-      final int addidtionResult = add(firstNumber, secondNumber);
-      printResult(ADDITION, addidtionResult);
+      final int additionResult = add(firstNumber, secondNumber);
+      printResult(ADDITION, additionResult);
     }
     if (SUBTRACTION.equals(operation)) {
       final int subtractionResult = subtract(firstNumber, secondNumber);
