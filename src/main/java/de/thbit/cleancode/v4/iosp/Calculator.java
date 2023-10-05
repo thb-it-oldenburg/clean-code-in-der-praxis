@@ -8,50 +8,50 @@ public class Calculator {
   private static final String ADDITION = "Addition";
 
   public static void main(String[] args) {
-    final int firstNumber = Integer.parseInt(args[0]);
-    final int secondNumber = Integer.parseInt(args[1]);
+    final int firstOperand = Integer.parseInt(args[0]);
+    final int secondOperand = Integer.parseInt(args[1]);
     final String operation = args[2];
 
     if (ADDITION.equals(operation)) {
-      final int additionResult = add(firstNumber, secondNumber);
+      final int additionResult = add(firstOperand, secondOperand);
       printResult(ADDITION, additionResult);
     }
     if (SUBTRACTION.equals(operation)) {
-      final int subtractionResult = subtract(firstNumber, secondNumber);
+      final int subtractionResult = subtract(firstOperand, secondOperand);
       printResult(SUBTRACTION, subtractionResult);
     }
     if (MULTIPLICATION.equals(operation)) {
-      final int multiplicationResult = multiply(firstNumber, secondNumber);
+      final int multiplicationResult = multiply(firstOperand, secondOperand);
       printResult(MULTIPLICATION, multiplicationResult);
     }
     if (DIVISION.equals(operation)) {
-      final int divisionResult = divide(firstNumber, secondNumber);
+      final int divisionResult = divide(firstOperand, secondOperand);
       printResult(DIVISION, divisionResult);
     }
     if (REMAINDER.equals(operation)) {
-      final int remainderResult = calculateRemainder(firstNumber, secondNumber);
+      final int remainderResult = calculateRemainder(firstOperand, secondOperand);
       printResult(REMAINDER, remainderResult);
     }
   }
 
-  private static int add(final int firstNumber, final int secondNumber) {
-    return firstNumber + secondNumber;
+  private static int add(final int firstOperand, final int secondOperand) {
+    return firstOperand + secondOperand;
   }
 
-  private static int subtract(final int firstNumber, final int secondNumber) {
-    return firstNumber - secondNumber;
+  private static int subtract(final int firstOperand, final int secondOperand) {
+    return firstOperand - secondOperand;
   }
 
-  private static int multiply(final int firstNumber, final int secondNumber) {
-    return firstNumber * secondNumber;
+  private static int multiply(final int firstOperand, final int secondOperand) {
+    return firstOperand * secondOperand;
   }
 
-  private static int divide(final int firstNumber, final int secondNumber) {
-    return firstNumber / secondNumber;
+  private static int divide(final int firstOperand, final int secondOperand) {
+    return firstOperand / secondOperand;
   }
 
-  private static int calculateRemainder(final int firstNumber, final int secondNumber) {
-    return firstNumber % secondNumber;
+  private static int calculateRemainder(final int firstOperand, final int secondOperand) {
+    return firstOperand % secondOperand;
   }
 
   private static void printResult(String operation, int result) {

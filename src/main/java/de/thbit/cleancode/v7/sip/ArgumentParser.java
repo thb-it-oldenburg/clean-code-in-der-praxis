@@ -1,11 +1,11 @@
 package de.thbit.cleancode.v7.sip;
 
 public class ArgumentParser {
-  public static int parseFirstNumber(String[] args) {
+  public static int parseFirstOperand(String[] args) {
     return Integer.parseInt(args[0]);
   }
 
-  public static int parseSecondNumber(String[] args) {
+  public static int parseSecondOperand(String[] args) {
     return Integer.parseInt(args[1]);
   }
 

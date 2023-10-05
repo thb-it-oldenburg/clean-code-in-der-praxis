@@ -13,21 +13,21 @@ public class CalculationUseCase {
     this.calculationService = calculationService;
   }
 
-  public int calculate(String operation, int firstNumber, int secondNumber) {
+  public int calculate(String operation, int firstOperand, int secondOperand) {
     if (ADDITION.equals(operation)) {
-      return calculationService.add(firstNumber, secondNumber);
+      return calculationService.add(firstOperand, secondOperand);
     }
     if (SUBTRACTION.equals(operation)) {
-      return calculationService.subtract(firstNumber, secondNumber);
+      return calculationService.subtract(firstOperand, secondOperand);
     }
     if (MULTIPLICATION.equals(operation)) {
-      return calculationService.multiply(firstNumber, secondNumber);
+      return calculationService.multiply(firstOperand, secondOperand);
     }
     if (DIVISION.equals(operation)) {
-      return calculationService.divide(firstNumber, secondNumber);
+      return calculationService.divide(firstOperand, secondOperand);
     }
     if (REMAINDER.equals(operation)) {
-      return calculationService.calculateRemainder(firstNumber, secondNumber);
+      return calculationService.calculateRemainder(firstOperand, secondOperand);
     }
     throw new UnsupportedOperationException(operation);
   }

@@ -9,21 +9,21 @@ public class CalculationUseCase {
   private static final String SUBTRACTION = "Subtraction";
   private static final String ADDITION = "Addition";
 
-  public static int calculate(String operation, int firstNumber, int secondNumber) {
+  public static int calculate(String operation, int firstOperand, int secondOperand) {
     if (ADDITION.equals(operation)) {
-      return CalculationService.add(firstNumber, secondNumber);
+      return CalculationService.add(firstOperand, secondOperand);
     }
     if (SUBTRACTION.equals(operation)) {
-      return CalculationService.subtract(firstNumber, secondNumber);
+      return CalculationService.subtract(firstOperand, secondOperand);
     }
     if (MULTIPLICATION.equals(operation)) {
-      return CalculationService.multiply(firstNumber, secondNumber);
+      return CalculationService.multiply(firstOperand, secondOperand);
     }
     if (DIVISION.equals(operation)) {
-      return CalculationService.divide(firstNumber, secondNumber);
+      return CalculationService.divide(firstOperand, secondOperand);
     }
     if (REMAINDER.equals(operation)) {
-      return CalculationService.calculateRemainder(firstNumber, secondNumber);
+      return CalculationService.calculateRemainder(firstOperand, secondOperand);
     }
     throw new UnsupportedOperationException(operation);
   }

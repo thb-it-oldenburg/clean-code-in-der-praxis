@@ -26,21 +26,21 @@ public class CalculationUseCase {
     this.remainder = remainder;
   }
 
-  public int calculate(String operation, int firstNumber, int secondNumber) {
+  public int calculate(String operation, int firstOperand, int secondOperand) {
     if (ADDITION.equals(operation)) {
-      return addition.add(firstNumber, secondNumber);
+      return addition.add(firstOperand, secondOperand);
     }
     if (SUBTRACTION.equals(operation)) {
-      return subtraction.subtract(firstNumber, secondNumber);
+      return subtraction.subtract(firstOperand, secondOperand);
     }
     if (MULTIPLICATION.equals(operation)) {
-      return multiplication.multiply(firstNumber, secondNumber);
+      return multiplication.multiply(firstOperand, secondOperand);
     }
     if (DIVISION.equals(operation)) {
-      return division.divide(firstNumber, secondNumber);
+      return division.divide(firstOperand, secondOperand);
     }
     if (REMAINDER.equals(operation)) {
-      return remainder.calculateRemainder(firstNumber, secondNumber);
+      return remainder.calculateRemainder(firstOperand, secondOperand);
     }
     throw new UnsupportedOperationException(operation);
   }

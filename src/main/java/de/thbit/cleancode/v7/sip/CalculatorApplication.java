@@ -8,11 +8,11 @@ public class CalculatorApplication {
     final CalculationService calculationService = new CalculationService();
     final CalculationUseCase calculationUseCase = new CalculationUseCase(calculationService, calculationService,
         calculationService, calculationService, calculationService);
-    final int firstNumber = ArgumentParser.parseFirstNumber(args);
-    final int secondNumber = ArgumentParser.parseSecondNumber(args);
+    final int firstOperand = ArgumentParser.parseFirstOperand(args);
+    final int secondOperand = ArgumentParser.parseSecondOperand(args);
     final String operation = ArgumentParser.parseOperation(args);
 
-    final int result = calculationUseCase.calculate(operation, firstNumber, secondNumber);
+    final int result = calculationUseCase.calculate(operation, firstOperand, secondOperand);
     ConsoleResultPrinter.printResult(operation, result);
   }
 }
