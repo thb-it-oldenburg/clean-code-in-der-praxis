@@ -1,4 +1,4 @@
-package de.thb.cleancode;
+package de.thbit.cleancode.v4.iosp;
 
 public class Calculator {
   private static final String REMAINDER = "Remainder";
@@ -13,25 +13,45 @@ public class Calculator {
     final String operation = args[2];
 
     if (ADDITION.equals(operation)) {
-      final int additionResult = firstNumber + secondNumber;
+      final int additionResult = add(firstNumber, secondNumber);
       printResult(ADDITION, additionResult);
     }
     if (SUBTRACTION.equals(operation)) {
-      final int subtractionResult = firstNumber - secondNumber;
+      final int subtractionResult = subtract(firstNumber, secondNumber);
       printResult(SUBTRACTION, subtractionResult);
     }
     if (MULTIPLICATION.equals(operation)) {
-      final int multiplicationResult = firstNumber * secondNumber;
+      final int multiplicationResult = multiply(firstNumber, secondNumber);
       printResult(MULTIPLICATION, multiplicationResult);
     }
     if (DIVISION.equals(operation)) {
-      final int divisionResult = firstNumber / secondNumber;
+      final int divisionResult = divide(firstNumber, secondNumber);
       printResult(DIVISION, divisionResult);
     }
     if (REMAINDER.equals(operation)) {
-      final int remainderResult = firstNumber % secondNumber;
+      final int remainderResult = calculateRemainder(firstNumber, secondNumber);
       printResult(REMAINDER, remainderResult);
     }
+  }
+
+  private static int add(final int firstNumber, final int secondNumber) {
+    return firstNumber + secondNumber;
+  }
+
+  private static int subtract(final int firstNumber, final int secondNumber) {
+    return firstNumber - secondNumber;
+  }
+
+  private static int multiply(final int firstNumber, final int secondNumber) {
+    return firstNumber * secondNumber;
+  }
+
+  private static int divide(final int firstNumber, final int secondNumber) {
+    return firstNumber / secondNumber;
+  }
+
+  private static int calculateRemainder(final int firstNumber, final int secondNumber) {
+    return firstNumber % secondNumber;
   }
 
   private static void printResult(String operation, int result) {

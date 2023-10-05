@@ -1,4 +1,4 @@
-package de.thb.cleancode.v2.codeconventions;
+package de.thbit.cleancode.v2.codeconventions;
 
 public class Code2 {
   private static final String REMAINDER = "Remainder";
